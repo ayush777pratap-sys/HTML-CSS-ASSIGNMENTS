@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+/* CSS Variables */
+:root {
+    --brand: #315bea;
+    --light: #eef2ff;
+    --dark: #1b2440;
+    --gap: 16px;
+    --border: #cbd5e1;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Page */
+body {
+    font-family: Georgia, serif;
+    background: #e8edf6;
+    color: var(--dark);
+    line-height: 1.6;
+    padding: var(--gap);
+}
+
+/* Main Container */
+.container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--light);
+}
+
+/* Hero Section */
+#hero {
+    background: var(--brand);
+    color: white;
+    text-align: center;
+    padding: 32px var(--gap);
+    border-radius: 12px;
+    margin-bottom: var(--gap);
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 4px;
+}
+
+#hero p {
+    font-size: 1.1rem;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 20px;
+    margin-top: var(--gap);
+    border-radius: 12px;
+}
+
+.card h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+/* Events Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background: var(--brand);
+    color: white;
+}
+
+/* Registration Form */
+.form-group {
+    margin-bottom: 8px;
+}
+
+label {
+    display: inline-block;
+    width: 52px;
+}
+
+input {
+    width: 234px;
+    max-width: calc(100% - 60px);
+    padding: 9px 8px;
+    font-size: 14px;
+}
+
+button {
+    background: var(--brand);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 22px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2348c9;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 12px;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 14px;
+    }
+
+    th,
+    td {
+        padding: 9px 6px;
+        font-size: 14px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div id="hero">
+    <h1>Coding club</h1>
+    <p>Learn.Build.share</p>
+    </div>
+    <div class="card">
+    <table>
+        <h2>Upcoming Events</h2>
+        <tr>
+            <th>Events</th>
+            <th>Date</th>
+            <th>Venue</th>
+        </tr>
+        <tr>
+            <td>Html Workshop</td>
+            <td>12 Nov</td>
+            <td>Lab 1</td>
+        </tr>
+        <tr>
+            <td>Hackathon</td>
+            <td>20 Nov</td>
+            <td>Seminar Hall</td>
+        </tr>
+    </table>
+    </div>
+
+
+    <div class="card"> 
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="you@example.com"><br>
+        <button type="submit">Register</button>
+    </div>
+    
+</body>
+</html>
