@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard</title>
+    <style>
+        
+
+/* Step 1: Basic settings */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #eef2f8;
+    color: #12203a;
+}
+
+/* Step 2: Main dashboard grid */
+.dashboard {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+        "head head"
+        "side main"
+        "foot foot";
+}
+
+/* Step 3: Assign grid areas */
+.head {
+    grid-area: head;
+}
+
+.side {
+    grid-area: side;
+}
+
+.main {
+    grid-area: main;
+}
+
+.foot {
+    grid-area: foot;
+}
+
+/* Step 4: Header */
+.head {
+    background: #12203a;
+    color: white;
+    padding: 20px;
+    min-height: 150px;
+    border-radius: 10px;
+}
+
+/* Step 5: Sidebar */
+.side {
+    background: #dce6fb;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.side ul {
+    padding-left: 20px;
+}
+
+.side li {
+    margin-bottom: 10px;
+}
+
+/* Step 6: Cards grid */
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    align-content: start;
+}
+
+/* Step 7: Individual cards */
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    min-height: 80px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card span {
+    font-size: 32px;
+}
+
+.stat-card strong {
+    font-size: 20px;
+}
+
+/* Step 8: Footer */
+.foot {
+    background: #12203a;
+    color: white;
+    padding: 20px;
+    min-height: 140px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Step 9: Responsive layout */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "head"
+            "side"
+            "main"
+            "foot";
+    }
+
+    .main {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <header class="head">
+            <h1>My Dashboard</h1>
+        </header>
+
+        <aside class="side">
+            <h3>Menu</h3>
+            <ul>
+                <li>Home</li>
+                <li>Reports</li>
+                <li>Settings</li>
+            </ul>
+        </aside>
+
+        <main class="main">
+
+            <div class="stat-card">
+                <span>👤</span>
+                <div><strong>120</strong><br>Users</div>
+            </div>
+
+            <div class="stat-card">
+                <span>💰</span>
+                <div><strong>Rs 45k</strong><br>Sales</div>
+            </div>
+
+            <div class="stat-card">
+                <span>📦</span>
+                <div><strong>36</strong><br>Orders</div>
+            </div>
+
+            <div class="stat-card">
+                <span>⭐</span>
+                <div><strong>4.8</strong><br>Rating</div>
+            </div>
+
+            <div class="stat-card">
+                <span>💬</span>
+                <div><strong>18</strong><br>Messages</div>
+            </div>
+
+            <div class="stat-card">
+                <span>✅</span>
+                <div><strong>92%</strong><br>Done</div>
+            </div>
+
+        </main>
+
+        <footer class="foot">
+            Made with CSS Grid
+        </footer>
+
+    </div>
+
+</body>
+</html>
